@@ -63,6 +63,10 @@ Route::middleware('signed')->group(function () {
     |--------------------------------------------------------------------------
 */
 
+Route::get('login', function () {
+    return redirect()->route('admin.login');
+})->name('login');
+
 Route::prefix('admin')->name('admin.')->group(function () {
 
     // Auth
